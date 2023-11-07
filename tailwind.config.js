@@ -10,7 +10,6 @@ export default {
         mantousans: ['mantousans', 'sans-serif'],
       },
       colors:{
-        'primary-gradient':"linear-gradient(to right, #E5793B, #FF4185)",
         'primary-theme-one':"#DA7D4A",
         'text-primary':'#334155',
         'text-secondary':'#94A3B8',

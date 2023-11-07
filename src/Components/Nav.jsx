@@ -12,12 +12,12 @@ export const Nav = () => {
         { href: "#youtube", img: "/yt-icon.png",alt: "Youtube"},
     ];
     return (
-        <header className="relative py-8">
+        <header className="relative py-8 px-5">
             <nav className="flex justify-between items-center">
                 <a href="/">
                     <img src="/title-icon.png" alt="" />
                 </a>
-                <ul className="flex gap-[10px]">
+                <ul className="flex gap-[10px] max-lg:hidden">
                     {navLinks.map((item) => (
                         <li key={item.label}>
                             <a href={item.href} className="text-text-primary text-lg">
@@ -28,13 +28,12 @@ export const Nav = () => {
                 </ul>
                 <ul className="flex gap-[10px]">
                     {socialMedia.map((item) => (
-                        <li key={item.label}>
+                        <li key={item.alt}>
                             <img src={item.img} alt={item.alt}/>
                         </li>
                     ))}
                 </ul>
             </nav>
-
         </header>
     )
 }

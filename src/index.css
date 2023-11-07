@@ -15,11 +15,25 @@
     margin: 0 auto;
   }
 
-  .text-color {
+  .text-gradient-color {
     background-image: linear-gradient(to right,#E5793B,#FF4185);
-    -webkit-background-clip: text;
+    background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent; 
     -moz-text-fill-color: transparent;
+  }
+
+  .bg-gradient-color {
+    background-image: linear-gradient(to right,#E5793B,#FF4185);
+  }
+
+  @keyframes scroll{
+    from{transform: translateX(100%)}
+    to{transform: translateX(-100%)}
+  }
+  
+  @keyframes scroll2{
+    from{transform: translateX(0%)}
+    to{transform: translateX(-200%)}
   }
 }
