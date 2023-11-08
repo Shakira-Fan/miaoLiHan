@@ -3,47 +3,47 @@ import { Nav } from "../Components/Nav"
 
 const Home = () => {
   const newsList = [
-    { 
-      id:1,
+    {
+      id: 1,
       date: "2023/12/24",
-      title:"掃街模式開啟！帶著你的貓耳，來和我一起走！",
-      content:"街上氣氛真的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！",
-      imgUrl:"/secondNews.png",
+      title: "掃街模式開啟！帶著你的貓耳，來和我一起走！",
+      content: "街上氣氛真的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！",
+      imgUrl: "/secondNews.png",
     },
-    { 
-      id:2,
+    {
+      id: 2,
       date: "2023/12/25",
-      title:"收容所模特兒大比拼！",
-      content:"今天的收容所不再是一片寂靜。為了讓更多人認識到這裡的毛孩子，我們舉辦了一場前所未有的「模特兒走秀」！",
-      imgUrl:"/thridNews.png",
+      title: "收容所模特兒大比拼！",
+      content: "今天的收容所不再是一片寂靜。為了讓更多人認識到這裡的毛孩子，我們舉辦了一場前所未有的「模特兒走秀」！",
+      imgUrl: "/thridNews.png",
     },
-    { 
-      id:3,
+    {
+      id: 3,
       date: "2023/12/26",
-      title:"參與台北寵物論壇，爭取貓咪友善環境",
-      content:"炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，決定要全力宣傳「貓咪至上」的理念！",
-      imgUrl:"/fourthNews.png",
+      title: "參與台北寵物論壇，爭取貓咪友善環境",
+      content: "炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，決定要全力宣傳「貓咪至上」的理念！",
+      imgUrl: "/fourthNews.png",
     }
   ]
 
   const policyIssuesList = [
     {
-      id:1,
-      content:"為毛孩子謀福利！",
-      content2:"推動寵物醫療保障方案",
-      imgUrl:"/policy-medical.png",
+      id: 1,
+      content: "為毛孩子謀福利！",
+      content2: "推動寵物醫療保障方案",
+      imgUrl: "/policy-medical.png",
     },
     {
-      id:2,
-      content:"打造休閒天堂！",
-      content2:"推廣寵物休閒與娛樂場所",
-      imgUrl:"/policy-playground.png",
+      id: 2,
+      content: "打造休閒天堂！",
+      content2: "推廣寵物休閒與娛樂場所",
+      imgUrl: "/policy-playground.png",
     },
     {
-      id:3,
-      content:"推廣寵物飼養教育，讓愛更加專業",
-      content2:'',
-      imgUrl:"/policy-education.png",
+      id: 3,
+      content: "推廣寵物飼養教育，讓愛更加專業",
+      content2: '',
+      imgUrl: "/policy-education.png",
     }
   ]
 
@@ -128,9 +128,9 @@ const Home = () => {
             </div>
           </div>
           <div className="flex flex-col">
-            {newsList.map(item=>(
-              <Card 
-                key={item.id} 
+            {newsList.map(item => (
+              <Card
+                key={item.id}
                 date={item.date}
                 title={item.title}
                 content={item.content}
@@ -144,7 +144,7 @@ const Home = () => {
         </div>
       </section>
       <section id="policyIssues" className=" bg-bg-color-theme-one flex flex-col items-center justify-center py-2 md:py-[50px]">
-      <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center">
           <div className="bg-text-primary w-[146px] rounded-xl mt-12 mb-2">
             <div className="text-white md:px-2 py-3 text-center font-bold">POLICY ISSUES</div>
           </div>
@@ -152,7 +152,7 @@ const Home = () => {
             <span className="text-gradient-color md:text-[64px] font-mantousans text-[52px]">政策議題</span>
           </div>
         </div>
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mx-8">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:mx-8 mx-4">
           {policyIssuesList.map(item => (
             <div key={item.id} className="mx-3 my-4 cursor-pointer">
               <div className="h-[72px]">
@@ -162,8 +162,40 @@ const Home = () => {
               <div>
                 <img src={item.imgUrl} alt="policy" />
               </div>
-              </div>
+            </div>
           ))}
+        </div>
+      </section>
+      <section id="donate" className=" bg-bg-color-theme-one flex justify-center max-sm:flex-col">
+        <div className="bg-primary-theme-one p-6 rounded-[32px] md:w-[648px] lg:h-[593px] h-[352px] w-[336px] flex justify-center items-center mx-8 my-2">
+          <div>
+            <div className="text-[40px] lg:text-[52px] font-mantousans text-white">
+              小額支持喵喵
+            </div>
+            <div className="font-semibold text-xl text-white">您的小筆捐款，是每隻毛孩未來的大大動力！</div>
+            <div className="grid grid-cols-2 gap-x-8 items-center mt-4">
+            <button type="button" className="bg-bg-color-theme-one w-[152px] py-4 rounded-3xl flex justify-center">
+              <span className="text-text-primary font-semibold">小額捐款</span>
+              <img src="/arrow_forward.png" alt="arrow" className="ml-2" />
+            </button>
+            <img src="/donate.png" alt="donate"/>
+          </div>
+          </div>
+        </div>
+        <div className="bg-text-primary p-6 md:w-[648px] lg:h-[593px] h-[352px] w-[336px] rounded-[32px] flex justify-center items-center mx-8 my-2">
+          <div>
+            <div className="text-[40px] lg:text-[52px] font-mantousans text-white">
+            民眾服務信箱
+            </div>
+            <div className="font-semibold text-xl text-white">親愛的鄉親，每一位市民的意見都是我們社區前進的原動力</div>
+            <div className="grid grid-cols-2 gap-x-8 items-center mt-4">
+            <button type="button" className="bg-bg-color-theme-one w-[152px] py-4 rounded-3xl flex justify-center">
+              <span className="text-text-primary font-semibold">小額捐款</span>
+              <img src="/arrow_forward.png" alt="arrow" className="ml-2" />
+            </button>
+            <img src="/email.png" alt="email"/>
+          </div>
+          </div>
         </div>
       </section>
     </main>
