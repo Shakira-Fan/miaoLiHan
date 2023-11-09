@@ -200,7 +200,7 @@ const Home = () => {
                   填寫表單
                 <AiOutlineArrowRight className="ml-1 text-2xl"/>
             </button>
-              <img src="images/email.png" alt="email" />
+              <img src="images/email-icon.png" alt="email" />
             </div>
           </div>
         </div>
