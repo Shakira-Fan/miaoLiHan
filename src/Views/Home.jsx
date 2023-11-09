@@ -12,21 +12,21 @@ const Home = () => {
       date: "2023/12/24",
       title: "掃街模式開啟！帶著你的貓耳，來和我一起走！",
       content: "街上氣氛真的很棒，從小孩到大人，甚至有些狗狗朋友都帶著貓耳來找我握手，真的太可愛了！",
-      imgUrl: "/secondNews.png",
+      imgUrl: "./secondNews.png",
     },
     {
       id: 2,
       date: "2023/12/25",
       title: "收容所模特兒大比拼！",
       content: "今天的收容所不再是一片寂靜。為了讓更多人認識到這裡的毛孩子，我們舉辦了一場前所未有的「模特兒走秀」！",
-      imgUrl: "/thridNews.png",
+      imgUrl: "./thridNews.png",
     },
     {
       id: 3,
       date: "2023/12/26",
       title: "參與台北寵物論壇，爭取貓咪友善環境",
       content: "炎炎夏日的周六，我走進了台北寵物論壇，帶著一副貓耳髮箍，決定要全力宣傳「貓咪至上」的理念！",
-      imgUrl: "/fourthNews.png",
+      imgUrl: "./fourthNews.png",
     }
   ]
 
@@ -35,19 +35,19 @@ const Home = () => {
       id: 1,
       content: "為毛孩子謀福利！",
       content2: "推動寵物醫療保障方案",
-      imgUrl: "/policy-medical.png",
+      imgUrl: "./policy-medical.png",
     },
     {
       id: 2,
       content: "打造休閒天堂！",
       content2: "推廣寵物休閒與娛樂場所",
-      imgUrl: "/policy-playground.png",
+      imgUrl: "./policy-playground.png",
     },
     {
       id: 3,
       content: "推廣寵物飼養教育，讓愛更加專業",
       content2: '',
-      imgUrl: "/policy-education.png",
+      imgUrl: "./policy-education.png",
     }
   ]
 
@@ -73,7 +73,7 @@ const Home = () => {
           </div>
         </div>
         <div className="flex justify-center mt-16 max-sm:mt-8 relative">
-          <img src="/home-person-img.png" alt="personImg"/>
+          <img src="./home-person-img.png" alt="personImg"/>
           <div className="absolute top-[228px] bg-white w-[208px] py-2 rounded-xl flex justify-center sm:hidden">
             <SocialMedia />
           </div>
@@ -109,7 +109,7 @@ const Home = () => {
               </div>
             </div>
             <div>
-              <img src="/advocate.png" alt="advocate" className=" rounded-b-2xl xl:rounded-r-2xl w-full h-full" />
+              <img src="./advocate.png" alt="advocate" className=" rounded-b-2xl xl:rounded-r-2xl w-full h-full" />
             </div>
           </div>
         </div>
@@ -126,7 +126,7 @@ const Home = () => {
         <div className="grid grid-cols-1 gap-x-6 xl:grid-cols-2 md:mx-16 mx-4">
           <div className="flex flex-col justify-center items-center">
             <div>
-              <img src="/firstNews.png" />
+              <img src="./firstNews.png" />
             </div>
             <div className="mt-5">
               <span className="text-text-secondary text-sm">2023/12/26</span>
@@ -185,7 +185,7 @@ const Home = () => {
                 小額捐款
                 <AiOutlineArrowRight className="ml-1 text-2xl"/>
             </button>
-              <img src="/donate.png" alt="donate" />
+              <img src="./donate.png" alt="donate" />
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ export const Nav = () => {
         <header className="py-4 px-5 mx-4 overflow-hidden fixed top-0 rounded-xl w-full 2xl:w-[1410px] bg-white/90 z-10" >
             <nav className="flex justify-between items-center">
                 <a href="/">
-                    <img src="/title-icon.png" alt="" />
+                    <img src="./title-icon.png" alt="" />
                 </a>
                 <ul className="flex gap-[10px] max-lg:hidden">
                     {navLinks.map((item) => (
