@@ -1,4 +1,5 @@
 import { Card } from "../Components/Card"
+import Footer from "../Components/Footer"
 import { Nav } from "../Components/Nav"
 
 const Home = () => {
@@ -166,37 +167,56 @@ const Home = () => {
           ))}
         </div>
       </section>
-      <section id="donate" className=" bg-bg-color-theme-one flex justify-center max-sm:flex-col">
-        <div className="bg-primary-theme-one p-6 rounded-[32px] md:w-[648px] lg:h-[593px] h-[352px] w-[336px] flex justify-center items-center mx-8 my-2">
+      <section id="donate" className=" bg-bg-color-theme-one flex justify-center items-center max-sm:flex-col md:py-3 py-2">
+        <div className="bg-primary-theme-one p-6 rounded-[32px] md:w-[648px] lg:h-[593px] h-[352px] w-[343px] flex justify-center items-center m-4 md:ml-10">
           <div>
             <div className="text-[40px] lg:text-[52px] font-mantousans text-white">
               小額支持喵喵
             </div>
             <div className="font-semibold text-xl text-white">您的小筆捐款，是每隻毛孩未來的大大動力！</div>
             <div className="grid grid-cols-2 gap-x-8 items-center mt-4">
-            <button type="button" className="bg-bg-color-theme-one w-[152px] py-4 rounded-3xl flex justify-center">
-              <span className="text-text-primary font-semibold">小額捐款</span>
-              <img src="/arrow_forward.png" alt="arrow" className="ml-2" />
-            </button>
-            <img src="/donate.png" alt="donate"/>
-          </div>
+              <button type="button" className="bg-bg-color-theme-one w-[152px] py-4 rounded-3xl flex justify-center">
+                <span className="text-text-primary font-semibold">小額捐款</span>
+                <img src="/arrow_forward.png" alt="arrow" className="ml-2" />
+              </button>
+              <img src="/donate.png" alt="donate" />
+            </div>
           </div>
         </div>
-        <div className="bg-text-primary p-6 md:w-[648px] lg:h-[593px] h-[352px] w-[336px] rounded-[32px] flex justify-center items-center mx-8 my-2">
+        <div className="bg-text-primary p-6 md:w-[648px] lg:h-[593px] h-[352px] w-[343px] rounded-[32px] flex justify-center items-center m-4 md:mr-10">
           <div>
             <div className="text-[40px] lg:text-[52px] font-mantousans text-white">
-            民眾服務信箱
+              民眾服務信箱
             </div>
             <div className="font-semibold text-xl text-white">親愛的鄉親，每一位市民的意見都是我們社區前進的原動力</div>
             <div className="grid grid-cols-2 gap-x-8 items-center mt-4">
-            <button type="button" className="bg-bg-color-theme-one w-[152px] py-4 rounded-3xl flex justify-center">
-              <span className="text-text-primary font-semibold">小額捐款</span>
-              <img src="/arrow_forward.png" alt="arrow" className="ml-2" />
-            </button>
-            <img src="/email.png" alt="email"/>
-          </div>
+              <button type="button" className="bg-bg-color-theme-one w-[152px] py-4 rounded-3xl flex justify-center">
+                <span className="text-text-primary font-semibold">小額捐款</span>
+                <img src="/arrow_forward.png" alt="arrow" className="ml-2" />
+              </button>
+              <img src="/email.png" alt="email" />
+            </div>
           </div>
         </div>
+      </section>
+      <section id="slogan" className="bg-bg-color-theme-one md:pt-[160px] pb-[60px] pt-[100px]">
+        <div className="flex flex-col lg:flex-row justify-center items-center">
+          <span className="text-gradient-color md:text-[64px] font-mantousans text-[52px] leading-none lg:mr-10">台灣的明天</span>
+          <span className="text-gradient-color md:text-[64px] font-mantousans text-[52px] leading-none">喵先鋪路</span>
+        </div>
+        <div className="flex justify-center items-center flex-col sm:flex-row lg:mt-8 mt-2">
+          <div className="flex justify-center items-center max-sm:mt-2">
+            <div className="bg-gradient-color rounded-full md:w-[50px] md:h-[50px] w-[39.83px] h-[39.83px] mr-4">
+              <div className="text-white text-[25.5px] md:text-[32px] text-center font-black">3</div>
+            </div>
+            <div>
+              <span className="text-primary-theme-one font-bold text-[28px] md:text-[40px]">喵立翰 Miao Li-Han</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-bg-color-theme-second">
+        <Footer/>
       </section>
     </main>
   )
