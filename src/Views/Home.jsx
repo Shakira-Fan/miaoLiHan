@@ -1,6 +1,9 @@
+import { BottomNav } from "../Components/BottomNav"
 import { Card } from "../Components/Card"
 import Footer from "../Components/Footer"
 import { Nav } from "../Components/Nav"
+import { SocialMedia } from "../Components/socialMedia"
+import {AiOutlineArrowRight} from "react-icons/ai"
 
 const Home = () => {
   const newsList = [
@@ -52,7 +55,7 @@ const Home = () => {
     <main className="max-container relative">
       <Nav />
       <section>
-        <div className="flex flex-col lg:flex-row justify-center items-center">
+        <div className="flex flex-col lg:flex-row justify-center items-center mt-28">
           <span className="text-gradient-color md:text-8xl font-mantousans text-[52px] leading-none lg:mr-10">台灣的明天</span>
           <span className="text-gradient-color md:text-8xl font-mantousans text-[52px] leading-none">喵先鋪路</span>
         </div>
@@ -69,8 +72,11 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center mt-16 max-sm:mt-8">
-          <img src="/home-person-img.png" alt="" />
+        <div className="flex justify-center mt-16 max-sm:mt-8 relative">
+          <img src="/home-person-img.png" alt="personImg"/>
+          <div className="absolute top-[228px] bg-white w-[208px] py-2 rounded-xl flex justify-center sm:hidden">
+            <SocialMedia />
+          </div>
         </div>
         <div className=" bg-primary-theme-one">
           <div className="flex justify-around animate-[scroll_40s_linear_infinite] md:w-[4000px] w-[2800px]">
@@ -137,9 +143,9 @@ const Home = () => {
                 content={item.content}
                 imgUrl={item.imgUrl}
               />))}
-            <button type="button" className="bg-bg-color-theme-one w-[152px] py-4 rounded-3xl flex justify-center">
-              <span className="text-text-primary font-semibold">查看更多</span>
-              <img src="/arrow_forward.png" alt="arrow" className="ml-2" />
+            <button type="button" className="bg-bg-color-theme-one w-[152px] py-4 rounded-3xl flex justify-center items-center hover:bg-primary-theme-one text-text-primary font-semibold hover:text-white">
+                查看更多
+                <AiOutlineArrowRight className="ml-1 text-2xl"/>
             </button>
           </div>
         </div>
@@ -175,25 +181,25 @@ const Home = () => {
             </div>
             <div className="font-semibold text-xl text-white">您的小筆捐款，是每隻毛孩未來的大大動力！</div>
             <div className="grid grid-cols-2 gap-x-8 items-center mt-4">
-              <button type="button" className="bg-bg-color-theme-one w-[152px] py-4 rounded-3xl flex justify-center">
-                <span className="text-text-primary font-semibold">小額捐款</span>
-                <img src="/arrow_forward.png" alt="arrow" className="ml-2" />
-              </button>
+            <button type="button" className="bg-bg-color-theme-one w-[152px] py-4 rounded-3xl flex justify-center items-center text-text-primary font-semibold hover:text-primary-theme-one">
+                小額捐款
+                <AiOutlineArrowRight className="ml-1 text-2xl"/>
+            </button>
               <img src="/donate.png" alt="donate" />
             </div>
           </div>
         </div>
-        <div className="bg-text-primary p-6 md:w-[648px] lg:h-[593px] h-[352px] w-[343px] rounded-[32px] flex justify-center items-center m-4 md:mr-10">
+        <div className="bg-text-primary p-6 md:w-[648px] lg:h-[593px] h-[352px] w-[343px] rounded-[32px] flex justify-center items-center m-4 md:mr-10" id="email">
           <div>
             <div className="text-[40px] lg:text-[52px] font-mantousans text-white">
               民眾服務信箱
             </div>
             <div className="font-semibold text-xl text-white">親愛的鄉親，每一位市民的意見都是我們社區前進的原動力</div>
             <div className="grid grid-cols-2 gap-x-8 items-center mt-4">
-              <button type="button" className="bg-bg-color-theme-one w-[152px] py-4 rounded-3xl flex justify-center">
-                <span className="text-text-primary font-semibold">小額捐款</span>
-                <img src="/arrow_forward.png" alt="arrow" className="ml-2" />
-              </button>
+            <button type="button" className="bg-bg-color-theme-one w-[152px] py-4 rounded-3xl flex justify-center items-center text-text-primary font-semibold hover:text-primary-theme-one">
+                  填寫表單
+                <AiOutlineArrowRight className="ml-1 text-2xl"/>
+            </button>
               <img src="/email.png" alt="email" />
             </div>
           </div>
@@ -215,9 +221,10 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="bg-bg-color-theme-second">
-        <Footer/>
+      <section className="bg-bg-color-theme-second max-lg:mb-12">
+        <Footer />
       </section>
+      <BottomNav/>
     </main>
   )
 }

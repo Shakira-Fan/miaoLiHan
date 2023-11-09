@@ -1,18 +1,16 @@
+import { SocialMedia } from "./socialMedia";
+
 export const Nav = () => {
     const navLinks = [
-        { href: "#home", label: "候選人主張" },
-        { href: "#about-us", label: "最新活動" },
-        { href: "#products", label: "政策議題" },
-        { href: "#contact-us", label: "小額捐款" },
-        { href: "#contact-us", label: "民眾服務信箱" },
+        { href: "#advocate", label: "候選人主張" },
+        { href: "#latestEvents", label: "最新活動" },
+        { href: "#policyIssues", label: "政策議題" },
+        { href: "#donate", label: "小額捐款" },
+        { href: "#email", label: "服務信箱" },
     ];
-    const socialMedia = [
-        { href: "#facebook", img: "/fb-icon.png",alt: "Facebook"},
-        { href: "#instargram", img: "/ig-icon.png",alt: "Instagram"},
-        { href: "#youtube", img: "/yt-icon.png",alt: "Youtube"},
-    ];
+    
     return (
-        <header className="relative py-8 px-5">
+        <header className="py-4 px-5 mx-4 overflow-hidden fixed top-0 rounded-xl w-full 2xl:w-[1410px] bg-white/90 z-10" >
             <nav className="flex justify-between items-center">
                 <a href="/">
                     <img src="/title-icon.png" alt="" />
@@ -20,19 +18,15 @@ export const Nav = () => {
                 <ul className="flex gap-[10px] max-lg:hidden">
                     {navLinks.map((item) => (
                         <li key={item.label}>
-                            <a href={item.href} className="text-text-primary text-lg">
+                            <a href={item.href} className="text-text-primary text-lg hover:text-primary-theme-one hover:font-semibold">
                                 {item.label}
                             </a>
                         </li>
                     ))}
                 </ul>
-                <ul className="flex gap-[10px]">
-                    {socialMedia.map((item) => (
-                        <li key={item.alt}>
-                            <img src={item.img} alt={item.alt}/>
-                        </li>
-                    ))}
-                </ul>
+                <div className="max-sm:hidden">
+                <SocialMedia/>
+                </div>
             </nav>
         </header>
     )

@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-        <footer className="grid lg:grid-cols-2 grid-cols-1 items-center p-12">
+        <footer className="grid lg:grid-cols-2 grid-cols-1 items-center sm:p-12 p-8">
             <div className="py-8">
                 <div className="flex">
                     <div className="bg-gradient-color rounded-full w-[39.83px] h-[39.83px] mr-4">
@@ -11,9 +11,9 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="flex my-3">
-                    <img src="/footer-fb.png" alt="facebook" />
-                    <img src="/footer-ig.png" alt="facebook"  className="mx-2"/>
-                    <img src="/footer-yt.png" alt="facebook" />
+                    <img src="/footer-fb.png" alt="facebook" className="cursor-pointer"/>
+                    <img src="/footer-ig.png" alt="facebook"  className="mx-2 cursor-pointer"/>
+                    <img src="/footer-yt.png" alt="facebook" className="cursor-pointer"/>
                 </div>
                 <div className="text-text-primary text-sm">
                     © 2023 喵立翰 Miao Li-Han 版權所有
