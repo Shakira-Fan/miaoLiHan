@@ -1,8 +1,8 @@
 export const SocialMedia = () => {
     const socialMedia = [
-        { href: "#facebook", img: "./fb-icon.png",alt: "Facebook"},
-        { href: "#instargram", img: "./ig-icon.png",alt: "Instagram"},
-        { href: "#youtube", img: "./yt-icon.png",alt: "Youtube"},
+        { href: "#facebook", img: "images/fb-icon.png",alt: "Facebook"},
+        { href: "#instargram", img: "images/ig-icon.png",alt: "Instagram"},
+        { href: "#youtube", img: "images/yt-icon.png",alt: "Youtube"},
     ];
   return (
     <ul className="flex gap-[10px]">

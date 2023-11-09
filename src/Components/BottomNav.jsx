@@ -1,10 +1,10 @@
 export const BottomNav = () => {
     const navLinks = [
-        { href: "#advocate", label: "候選人主張", imgUrl: "./Icon-advocate.png" },
-        { href: "#latestEvents", label: "最新活動", imgUrl: "./Icon-latestEvents.png" },
-        { href: "#policyIssues", label: "政策議題", imgUrl: "./Icon-policyIssues.png" },
-        { href: "#donate", label: "小額捐款", imgUrl: "./Icon-donate.png" },
-        { href: "#email", label: "服務信箱", imgUrl: "./Icon-email.png" },
+        { href: "#advocate", label: "候選人主張", imgUrl: "images/Icon-advocate.png" },
+        { href: "#latestEvents", label: "最新活動", imgUrl: "images/Icon-latestEvents.png" },
+        { href: "#policyIssues", label: "政策議題", imgUrl: "images/Icon-policyIssues.png" },
+        { href: "#donate", label: "小額捐款", imgUrl: "images/Icon-donate.png" },
+        { href: "#email", label: "服務信箱", imgUrl: "images/Icon-email.png" },
     ];
     return (
         <div className="py-4 px-8 overflow-hidden fixed bottom-0 w-screen 2xl:w-[1410px] bg-white/90 z-10 lg:hidden">

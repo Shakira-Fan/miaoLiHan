@@ -11,9 +11,9 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="flex my-3">
-                    <img src="./footer-fb.png" alt="facebook" className="cursor-pointer"/>
-                    <img src="./footer-ig.png" alt="facebook"  className="mx-2 cursor-pointer"/>
-                    <img src="./footer-yt.png" alt="facebook" className="cursor-pointer"/>
+                    <img src="images/footer-fb.png" alt="facebook" className="cursor-pointer"/>
+                    <img src="images/footer-ig.png" alt="facebook"  className="mx-2 cursor-pointer"/>
+                    <img src="images/footer-yt.png" alt="facebook" className="cursor-pointer"/>
                 </div>
                 <div className="text-text-primary text-sm">
                     © 2023 喵立翰 Miao Li-Han 版權所有
