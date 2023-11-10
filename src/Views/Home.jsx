@@ -1,5 +1,6 @@
 import { BottomNav } from "../Components/BottomNav"
 import { Card } from "../Components/Card"
+import DialogModal from "../Components/LastNewsDialog"
 import Footer from "../Components/Footer"
 import { Nav } from "../Components/Nav"
 import { SocialMedia } from "../Components/socialMedia"
