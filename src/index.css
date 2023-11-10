@@ -27,13 +27,39 @@
     background-image: linear-gradient(to right,#E5793B,#FF4185);
   }
 
-  @keyframes scroll{
-    from{transform: translateX(100%)}
-    to{transform: translateX(-100%)}
+  .marquee-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
   }
   
-  @keyframes scroll2{
-    from{transform: translateX(0%)}
-    to{transform: translateX(-200%)}
+  .marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+  }
+  
+  .marquee-content2 {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marquee2 20s linear infinite;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  @keyframes marquee2 {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 }

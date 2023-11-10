@@ -3,7 +3,7 @@ import { Card } from "../Components/Card"
 import Footer from "../Components/Footer"
 import { Nav } from "../Components/Nav"
 import { SocialMedia } from "../Components/socialMedia"
-import {AiOutlineArrowRight} from "react-icons/ai"
+import { AiOutlineArrowRight } from "react-icons/ai"
 
 const Home = () => {
   const newsList = [
@@ -73,19 +73,21 @@ const Home = () => {
           </div>
         </div>
         <div className="flex justify-center mt-16 max-sm:mt-8 relative">
-          <img src="images/home-person-img.png" alt="personImg"/>
+          <img src="images/home-person-img.png" alt="personImg" />
           <div className="absolute top-[228px] bg-white w-[208px] py-2 rounded-xl flex justify-center sm:hidden">
             <SocialMedia />
           </div>
         </div>
-        <div className=" bg-primary-theme-one">
-          <div className="flex justify-around animate-[scroll_40s_linear_infinite] md:w-[4000px] w-[2800px]">
-            <div className="text-white md:text-[64px] text-[40px] font-mantousans mr-1">為喵星人，護台灣！</div>
-            <div className="text-white md:text-[64px] text-[40px] font-mantousans mr-1">從喵的眼中，看見台灣</div>
-            <div className="text-white md:text-[64px] text-[40px] font-mantousans mr-1">喵的未來，人的希望</div>
-            <div className="text-white md:text-[64px] text-[40px] font-mantousans mr-1">為喵星人，護台灣！</div>
-            <div className="text-white md:text-[64px] text-[40px] font-mantousans mr-1">從喵的眼中，看見台灣</div>
-            <div className="text-white md:text-[64px] text-[40px] font-mantousans mr-1">喵的未來，人的希望</div>
+        <div className="marquee-container  bg-primary-theme-one">
+          <div className="marquee-content text-white md:text-[64px] text-[40px] font-mantousans mx-8">
+            <span>為喵星人，護台灣！</span>
+            <span className="mx-6">從喵的眼中，看見台灣</span>
+            <span>喵的未來，人的希望</span>
+          </div>
+          <div className="marquee-content2 text-white md:text-[64px] text-[40px] font-mantousans">
+            <span>為喵星人，護台灣！</span>
+            <span className="mx-6">從喵的眼中，看見台灣</span>
+            <span>喵的未來，人的希望</span>
           </div>
         </div>
       </section>
@@ -144,8 +146,8 @@ const Home = () => {
                 imgUrl={item.imgUrl}
               />))}
             <button type="button" className="bg-bg-color-theme-one w-[152px] py-4 rounded-3xl flex justify-center items-center hover:bg-primary-theme-one text-text-primary font-semibold hover:text-white">
-                查看更多
-                <AiOutlineArrowRight className="ml-1 text-2xl"/>
+              查看更多
+              <AiOutlineArrowRight className="ml-1 text-2xl" />
             </button>
           </div>
         </div>
@@ -181,10 +183,10 @@ const Home = () => {
             </div>
             <div className="font-semibold text-xl text-white">您的小筆捐款，是每隻毛孩未來的大大動力！</div>
             <div className="grid grid-cols-2 gap-x-8 items-center mt-4">
-            <button type="button" className="bg-bg-color-theme-one w-[152px] py-4 rounded-3xl flex justify-center items-center text-text-primary font-semibold hover:text-primary-theme-one">
+              <button type="button" className="bg-bg-color-theme-one w-[152px] py-4 rounded-3xl flex justify-center items-center text-text-primary font-semibold hover:text-primary-theme-one">
                 小額捐款
-                <AiOutlineArrowRight className="ml-1 text-2xl"/>
-            </button>
+                <AiOutlineArrowRight className="ml-1 text-2xl" />
+              </button>
               <img src="images/donate.png" alt="donate" />
             </div>
           </div>
@@ -196,10 +198,10 @@ const Home = () => {
             </div>
             <div className="font-semibold text-xl text-white">親愛的鄉親，每一位市民的意見都是我們社區前進的原動力</div>
             <div className="grid grid-cols-2 gap-x-8 items-center mt-4">
-            <button type="button" className="bg-bg-color-theme-one w-[152px] py-4 rounded-3xl flex justify-center items-center text-text-primary font-semibold hover:text-primary-theme-one">
-                  填寫表單
-                <AiOutlineArrowRight className="ml-1 text-2xl"/>
-            </button>
+              <button type="button" className="bg-bg-color-theme-one w-[152px] py-4 rounded-3xl flex justify-center items-center text-text-primary font-semibold hover:text-primary-theme-one">
+                填寫表單
+                <AiOutlineArrowRight className="ml-1 text-2xl" />
+              </button>
               <img src="images/email-icon.png" alt="email" />
             </div>
           </div>
@@ -224,7 +226,7 @@ const Home = () => {
       <section className="bg-bg-color-theme-second max-lg:mb-12">
         <Footer />
       </section>
-      <BottomNav/>
+      <BottomNav />
     </main>
   )
 }
