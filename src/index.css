@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'mantousans';
-  src: url('./assets/fonts/MantouSans-Regular.ttf') format('ttf');
+  src: local('mantousans'), format('truetype'), url('./assets/fonts/MantouSans-Regular.ttf');
 }
 
 * {
