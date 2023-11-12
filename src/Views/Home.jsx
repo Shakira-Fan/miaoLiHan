@@ -2,6 +2,7 @@ import { BottomNav } from "../Components/BottomNav";
 import { Card } from "../Components/Card";
 import Footer from "../Components/Footer";
 import { Nav } from "../Components/Nav";
+import { PolicyCard } from "../Components/PolicyCard";
 import { SocialMedia } from "../Components/socialMedia";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
@@ -36,20 +37,62 @@ const Home = () => {
   const policyIssuesList = [
     {
       id: 1,
-      content: "為毛孩子謀福利！",
-      content2: "推動寵物醫療保障方案",
+      title: "為毛孩子謀福利！推動寵物醫療保障方案",
+      content: [
+        {
+          title: "設立寵物醫療基金",
+          content: "每年撥款新台幣 10 億元，專款專用於支援家庭寵物的醫療費用",
+        },
+        {
+          title: "提供醫療補助",
+          content:
+            "每隻寵物每年可獲得高達新台幣 20,000 元的醫療補助，減輕飼主的經濟壓力",
+        },
+        {
+          title: "合作動物醫院",
+          content: "目前已有和超過 200 家動物醫院進行初步的合作討論",
+        },
+      ],
       imgUrl: "images/policy-medical.png",
     },
     {
       id: 2,
-      content: "打造休閒天堂！",
-      content2: "推廣寵物休閒與娛樂場所",
+      title: "打造休閒天堂！推廣寵物休閒與娛樂場所",
+      content: [
+        {
+          title: "設立寵物醫療基金",
+          content: "每年撥款新台幣 10 億元，專款專用於支援家庭寵物的醫療費用",
+        },
+        {
+          title: "提供醫療補助",
+          content:
+            "每隻寵物每年可獲得高達新台幣 20,000 元的醫療補助，減輕飼主的經濟壓力",
+        },
+        {
+          title: "合作動物醫院",
+          content: "目前已有和超過 200 家動物醫院進行初步的合作討論",
+        },
+      ],
       imgUrl: "images/policy-playground.png",
     },
     {
       id: 3,
-      content: "推廣寵物飼養教育，讓愛更加專業",
-      content2: "",
+      title: "推廣寵物飼養教育，讓愛更加專業",
+      content: [
+        {
+          title: "設立寵物醫療基金",
+          content: "每年撥款新台幣 10 億元，專款專用於支援家庭寵物的醫療費用",
+        },
+        {
+          title: "提供醫療補助",
+          content:
+            "每隻寵物每年可獲得高達新台幣 20,000 元的醫療補助，減輕飼主的經濟壓力",
+        },
+        {
+          title: "合作動物醫院",
+          content: "目前已有和超過 200 家動物醫院進行初步的合作討論",
+        },
+      ],
       imgUrl: "images/policy-education.png",
     },
   ];
@@ -218,19 +261,13 @@ const Home = () => {
         </div>
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:mx-8 mx-4">
           {policyIssuesList.map((item) => (
-            <div key={item.id} className="mx-3 my-4 cursor-pointer">
-              <div className="h-[72px]">
-                <div className="text-text-primary text-2xl font-bold">
-                  {item.content}
-                </div>
-                <div className="text-text-primary text-2xl font-bold">
-                  {item.content2}
-                </div>
-              </div>
-              <div>
-                <img src={item.imgUrl} alt="policy" />
-              </div>
-            </div>
+            <PolicyCard
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              content={item.content}
+              imgUrl={item.imgUrl}
+            />
           ))}
         </div>
       </section>
