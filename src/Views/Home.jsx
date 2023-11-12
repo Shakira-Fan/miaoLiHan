@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { BottomNav } from "../Components/BottomNav";
 import { Card } from "../Components/Card";
 import Footer from "../Components/Footer";
@@ -5,6 +6,8 @@ import { Nav } from "../Components/Nav";
 import { PolicyCard } from "../Components/PolicyCard";
 import { SocialMedia } from "../Components/socialMedia";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { DonateDialog } from "../Components/DonateDialog";
+import { FormDialog } from "../Components/FormDialog";
 
 const Home = () => {
   const newsList = [
@@ -102,6 +105,25 @@ const Home = () => {
     { href: "#instargram", img: "images/ig-icon.png", alt: "Instagram" },
     { href: "#youtube", img: "images/yt-icon.png", alt: "Youtube" },
   ];
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [emailIsOpen, setEmailIsOpen] = useState(false);
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function closeEmail() {
+    setEmailIsOpen(false);
+  }
+
+  function openEmail() {
+    setEmailIsOpen(true);
+  }
 
   return (
     <main className="max-container relative">
@@ -287,6 +309,7 @@ const Home = () => {
               <button
                 type="button"
                 className="bg-bg-color-theme-one w-[152px] py-4 rounded-3xl flex justify-center items-center text-text-primary font-semibold hover:text-primary-theme-one"
+                onClick={openModal}
               >
                 小額捐款
                 <AiOutlineArrowRight className="ml-1 text-2xl" />
@@ -294,6 +317,7 @@ const Home = () => {
               <img src="images/donate.png" alt="donate" />
             </div>
           </div>
+          <DonateDialog isOpen={isOpen} closeModal={closeModal} />
         </div>
         <div
           className="bg-text-primary p-6 md:w-[648px] lg:h-[593px] h-[352px] w-[343px] rounded-[32px] flex justify-center items-center m-4 md:mr-10"
@@ -310,6 +334,7 @@ const Home = () => {
               <button
                 type="button"
                 className="bg-bg-color-theme-one w-[152px] py-4 rounded-3xl flex justify-center items-center text-text-primary font-semibold hover:text-primary-theme-one"
+                onClick={openEmail}
               >
                 填寫表單
                 <AiOutlineArrowRight className="ml-1 text-2xl" />
@@ -317,6 +342,7 @@ const Home = () => {
               <img src="images/email-icon.png" alt="email" />
             </div>
           </div>
+          <FormDialog isOpen={emailIsOpen} closeModal={closeEmail} />
         </div>
       </section>
       <section

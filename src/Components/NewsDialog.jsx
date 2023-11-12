@@ -117,11 +117,11 @@ export default function NewsDialog({
                         <div className="text-text-primary font-semibold mb-2">
                           更多活動
                         </div>
-                        <div className="flex justify-around">
+                        <div className="grid grid-cols-2 gap-x-2">
                           {newsList
                             .filter((news) => news.id !== id)
                             .map((others) => (
-                              <div key={others.id} className="mx-2">
+                              <div key={others.id}>
                                 <div>
                                   <img
                                     src={others.imgUrl}

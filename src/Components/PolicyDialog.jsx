@@ -155,7 +155,7 @@ export default function PolicyDialog({
                               <div className="text-[20px] text-text-primary font-bold my-1">
                                 {item.title}
                               </div>
-                              <div className="text-lg text-text-primary">
+                              <div className="text-lg max-sm:text-base text-text-primary">
                                 {item.content}
                               </div>
                             </div>
@@ -166,16 +166,16 @@ export default function PolicyDialog({
                         <div className="text-text-primary font-semibold mb-2">
                           更多政策議題
                         </div>
-                        <div className="flex justify-around">
+                        <div className="grid grid-cols-2 gap-x-2">
                           {policyIssuesList
                             .filter((news) => news.id !== id)
                             .map((others) => (
-                              <div key={others.id} className="mx-2">
+                              <div key={others.id}>
                                 <div>
                                   <img
                                     src={others.imgUrl}
                                     alt="news"
-                                    className="w-[244px] h-[134px] object-contain rounded-2xl"
+                                    className="w-[244px] h-[134px] object-cover rounded-2xl"
                                   />
                                 </div>
                                 <div>{others.title}</div>
