@@ -1,8 +1,37 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
+import Button from "./Button";
 
 export const DonateDialog = ({ isOpen, closeModal }) => {
+  const donatePlans = [
+    {
+      id: 0,
+      title: '喵星人之友',
+      headcount: 9957,
+      price: 600,
+    },
+    {
+      id: 1,
+      title: '喵星大使',
+      headcount: 2000,
+      price: 6000,
+    },
+    {
+      id: 2,
+      title: '喵星傳奇',
+      headcount: 999,
+      price: 60000,
+    }
+  ];
+
   const [donateTotal, setDonateTotal] = useState(987655873);
+
+  const [selectedId, setSelectedId] = useState(null);
+
+  const handleSelectButton = (id) => {
+    // 如果當前按鈕已經被選中，則取消選擇；否則，選中當前按鈕
+    setSelectedId((prevSelectedId) => (prevSelectedId === id ? null : id));
+  };
 
   return (
     <>
@@ -47,27 +76,58 @@ export const DonateDialog = ({ isOpen, closeModal }) => {
                       />
                     </div>
                   </Dialog.Title>
-                  <div>
-                    <div className="bg-bg-color-theme-second p-10 rounded-3xl">
+                  <div className="grid md:grid-cols-2 grid-cols-1 gap-x-4">
+                    <div className="bg-bg-color-theme-second md:p-10 p-5 rounded-3xl flex md:flex-col">
                       <div>
-                        <div className="text-primary-theme-one text-[40px] font-bold">
-                          您的小筆捐款
+                        <div>
+                          <div className="text-primary-theme-one text-base md:text-[40px] md:leading-[60px] font-bold">
+                            您的小筆捐款
+                          </div>
+                          <div className="text-primary-theme-one text-base md:text-[40px] md:leading-[60px] font-bold">
+                            是每隻毛孩未來的大大動力！
+                          </div>
                         </div>
-                        <div className="text-primary-theme-one text-[40px] font-bold">
-                          是每隻毛孩未來的大大動力！
+                        <div className="text-text-primary text-sm md:text-base">
+                          目前小額贊助總金額
+                        </div>
+                        <div className="text-text-primary text-[20px] md:text-[32px] font-bold">
+                          {donateTotal}
                         </div>
                       </div>
-                      <div className="text-text-primary">
-                        目前小額贊助總金額
-                      </div>
-                      <div className="text-text-primary text-[32px] font-bold">
-                        {donateTotal}
-                      </div>
-                      <div className="flex justify-center">
-                        <img src="images/donateDialog.png" alt="donate" />
+                      <div className="flex justify-center items-center">
+                        <img src="images/donateDialog.png" alt="donate" className="h-[98px] md:h-full object-contain" />
                       </div>
                     </div>
-                    <div></div>
+                    <div>
+                      <div className="text-text-primary text-[20px] font-bold">
+                        捐款方案
+                      </div>
+                      {donatePlans.map(plan =>
+                        <Button
+                          key={plan.id}
+                          id={plan.id}
+                          title={plan.title}
+                          price={plan.price}
+                          headcount={plan.headcount}
+                          isSelected={selectedId === plan.id}
+                          handleSelectButton={handleSelectButton}
+                        />)}
+                      <div
+                        onClick={() => {
+                          setSelectedId(donatePlans.length)
+                        }}
+                        className={`border-[3px] py-6 px-4 rounded-2xl my-4 ${selectedId === donatePlans.length ? " border-primary-theme-one" : "border-gray-200"}`}
+                      >
+                        <div className=" text-primary-theme-one font-bold text-[20px]">自訂贊助金額</div>
+                        <div className="bg-gray-100  rounded-2xl lg:w-[509px] md:w-[430px] w-[330px]">
+                          <span className="mx-2 pl-2 text-text-primary">NT$</span>
+                          <input type="text" className="bg-gray-100  outline-none border-none w-[250px] md:w-[350px] lg:w-[400px] py-4 text-lg" placeholder="輸入金額"/>
+                        </div>
+                      </div>
+                      <div>
+                        <button type="button"></button>
+                      </div>
+                    </div>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
