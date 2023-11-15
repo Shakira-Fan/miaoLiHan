@@ -15,6 +15,7 @@ export default {
         'text-secondary':'#94A3B8',
         'bg-color-theme-one':"#FDFCFB",
         'bg-color-theme-second':"#F7ECE1",
+        'bg-color-form-dialog':"#E3F8FF",
       }
     },
   },
