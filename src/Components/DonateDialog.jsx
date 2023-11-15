@@ -130,14 +130,14 @@ export const DonateDialog = ({ isOpen, closeModal }) => {
                         onClick={() => {
                           setSelectedId(donatePlans.length)
                         }}
-                        className={`border-[3px] py-6 px-4 rounded-2xl my-4 ${selectedId === donatePlans.length ? " border-primary-theme-one" : "border-gray-200"}`}
+                        className={`border-[3px] rounded-2xl p-2 my-4 ${selectedId === donatePlans.length ? " border-primary-theme-one" : "border-gray-200"}`}
                       >
-                        <div className=" text-primary-theme-one font-bold text-[20px]">自訂贊助金額</div>
-                        <div className="bg-gray-100  rounded-2xl w-full">
-                          <span className="mx-2 pl-2 text-text-primary">NT$</span>
+                        <div className=" text-primary-theme-one font-bold text-[20px] pt-6 pb-2 px-4">自訂贊助金額</div>
+                        <div className="bg-gray-100 rounded-2xl w-full flex items-center">
+                          <div className="text-text-primary px-4">NT$</div>
                           <input 
                             type="text" 
-                            className="bg-gray-100  outline-none border-none py-4 text-lg" 
+                            className="bg-gray-100  outline-none border-none py-2 text-lg" 
                             placeholder="輸入金額"
                             value={customerPrice}
                             onChange={(e)=>{
