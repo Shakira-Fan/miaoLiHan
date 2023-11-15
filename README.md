@@ -1,8 +1,16 @@
-# React + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 喵立漢立委競選官網
+![立委競選官網封面](public/images/cover.png)
 
-Currently, two official plugins are available:
+</div>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Demo](https://shakira-fan.github.io/miaoLiHan/)
+
+感謝jhen設計師設計的設計稿!!
+[設計稿參考連結](https://2023.thef2e.com/users/12061579704041679194)
+
+# 使用技術
+
+1.Web Framework — React
+2.UI Framework — TailwindCss, Headless, React-Icons
