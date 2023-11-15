@@ -231,7 +231,7 @@ const Home = () => {
         <div className="grid grid-cols-1 gap-x-6 xl:grid-cols-2 md:mx-16 mx-4">
           <div className="flex flex-col justify-center items-center">
             <div>
-              <img src="images/firstNews.png" />
+              <img src="images/firstNews.svg" className="w-[648px]"/>
             </div>
             <div className="mt-5">
               <span className="text-text-secondary text-sm">2023/12/26</span>
