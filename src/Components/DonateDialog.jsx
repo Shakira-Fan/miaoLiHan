@@ -25,13 +25,27 @@ export const DonateDialog = ({ isOpen, closeModal }) => {
   ];
 
   const [donateTotal, setDonateTotal] = useState(987655873);
-
   const [selectedId, setSelectedId] = useState(null);
+  const [customerPrice, setCustomerPrice] = useState(0);
+  const [isloading, setIsLoading] = useState(false);
 
   const handleSelectButton = (id) => {
     // 如果當前按鈕已經被選中，則取消選擇；否則，選中當前按鈕
     setSelectedId((prevSelectedId) => (prevSelectedId === id ? null : id));
   };
+
+  const handleSubmit=()=>{
+    console.log(selectedId)
+    if(selectedId !== 3){
+      const priceItem = donatePlans.filter(item => item.id === selectedId)
+      setDonateTotal(priceItem[0].price+donateTotal)
+      setIsLoading(true)
+    }
+    if(selectedId === 3){
+      setDonateTotal(donateTotal+Number(customerPrice))
+      setIsLoading(true)
+    }
+  }
 
   return (
     <>
@@ -79,7 +93,7 @@ export const DonateDialog = ({ isOpen, closeModal }) => {
                   <div className="grid md:grid-cols-2 grid-cols-1 gap-x-4">
                     <div className="bg-bg-color-theme-second md:p-10 p-5 rounded-3xl flex md:flex-col">
                       <div>
-                        <div>
+                        <div className="mb-4">
                           <div className="text-primary-theme-one text-base md:text-[40px] md:leading-[60px] font-bold">
                             您的小筆捐款
                           </div>
@@ -98,7 +112,7 @@ export const DonateDialog = ({ isOpen, closeModal }) => {
                         <img src="images/donateDialog.png" alt="donate" className="h-[98px] md:h-full object-contain" />
                       </div>
                     </div>
-                    <div>
+                    {!isloading ? (<div>
                       <div className="text-text-primary text-[20px] font-bold">
                         捐款方案
                       </div>
@@ -121,13 +135,50 @@ export const DonateDialog = ({ isOpen, closeModal }) => {
                         <div className=" text-primary-theme-one font-bold text-[20px]">自訂贊助金額</div>
                         <div className="bg-gray-100  rounded-2xl lg:w-[509px] md:w-[430px] w-[330px]">
                           <span className="mx-2 pl-2 text-text-primary">NT$</span>
-                          <input type="text" className="bg-gray-100  outline-none border-none w-[250px] md:w-[350px] lg:w-[400px] py-4 text-lg" placeholder="輸入金額"/>
+                          <input 
+                            type="text" 
+                            className="bg-gray-100  outline-none border-none w-[250px] md:w-[350px] lg:w-[400px] py-4 text-lg" 
+                            placeholder="輸入金額"
+                            value={customerPrice}
+                            onChange={(e)=>{
+                              setCustomerPrice(e.target.value)
+                            }}
+                            />
                         </div>
                       </div>
                       <div>
-                        <button type="button"></button>
+                        <button 
+                          type="button" 
+                          className="bg-primary-theme-one text-white w-full py-6 rounded-full font-semibold"
+                          onClick={()=>{
+                            handleSubmit()
+                          }}
+                          >
+                          前往捐款
+                        </button>
                       </div>
-                    </div>
+                    </div>)
+                    :
+                    (<div className="flex flex-col justify-center items-center gap-4 mt-6">
+                      <div className="text-text-primary text-[28px] font-bold">
+                        感謝您的捐款
+                      </div>
+                      <div>
+                        <img src="images/finish-donate.png" alt="finish-donate" />
+                      </div>
+                      <div>
+                        <button 
+                          type="button" 
+                          className="bg-gray-100 w-[224px] py-4 rounded-full cursor-pointer"
+                          onClick={()=>{
+                            setIsLoading(false)
+                            closeModal()
+                          }}
+                          >
+                            關閉
+                          </button>
+                      </div>
+                    </div>)}
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
